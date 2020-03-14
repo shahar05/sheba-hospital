@@ -1,0 +1,42 @@
+
+
+//<strong > .' + (i + 1) + '</strong>
+
+
+    //     <div class="pull-right">
+    //     <a class="btn btn-sm btn-warning">Edit</a>
+    //    <form  class="delete-form" method="POST">
+    //     <input type="submit" class="btn btn-sm btn-danger"  value="Delete">
+    //    </form>
+    //  </div>
+
+
+    // $.ajax({
+    //     type: "POST",
+    //     url: "http://localhost:3000/users/" + newParam + "?_method=DELETE",
+    //     success: function (response) {
+
+    
+    
+    //     }
+    // });
+
+
+    //'<li class="text-right">  ' + response.questions[i].text + " " + '     <span class="pull-right">   <a class="btn btn-sm btn-danger  ">Delete</a>  </span> </li> <hr>';
+
+          //  console.log(questArr.questions[j]._id);
+        
+        
+
+
+        // let num = { number :$(this).parent().parent('li').index()};
+        // let url = "http://localhost:3000/users/" + param + "/questions/?_method=PUT";
+        
+        // HttpHelper.post(url , num).then(function(response){
+        //     window.location.reload();
+        // })
+
+             //$('#editBtn').html('<a href="./edit.html?myVar=' + response._id + '"class="btn btn-md btn-warning">Edit</a>');
+
+
+

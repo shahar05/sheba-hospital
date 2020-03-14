@@ -1,0 +1,431 @@
+
+
+function isLoggedIn(req, res, next) {
+    // console.log(req.isAuthenticated());
+    // console.log(req);
+    next();
+}
+
+// function isLoogy(req,res,next){
+//     console.log(req.session);
+//     passport.authenticate('local',function(err,user,inf
+//o){
+//         if(!user){
+//             console.log(user);
+//             console.log(info.message);
+//             return res.send(false);}
+//         else{
+//             req.login(user , function(err){
+//                 if(err)return next();
+//                 else{
+//                     console.log("yey");
+//                     return res.send(true);
+//                 }
+
+//             });
+//         }
+//     });
+// }
+
+// function isLoogy(request, response, next){
+//         console.log(request.session)
+//         passport.authenticate('login', 
+//         function(err, user, info) {
+//             if(!user){ response.send(info.message);}
+//             else{
+
+//                 request.login(user, function(error) {
+//                     if (error) return next(error);
+//                     console.log("Request Login supossedly successful.");
+//                     return response.send('Login successful');
+//                 });
+//             }
+//         }}
+
+    // console.log(req.body);
+    // console.log(req.body.userName);
+    // console.log(req.body.userPassword);
+
+
+    // Doctor.register(newDoc, req.body.userPassword, function (err, doctor) {
+    //     if (err) {
+    //         console.log(err);
+    //         res.send(false);
+    //         return;
+    //     } else {
+    //         passport.authenticate("local")(req, res, function () {
+    //             // req.flash("success", "Welcome:" + doctor.username);
+
+    //             console.log(doctor.username);
+    //             res.send(true);
+    //             return;
+    //         });
+    //     }
+    // });
+
+
+      var many = [{ text: arr[0] }, { text: arr[1] }, { text: arr[2] }, { text: arr[3] }, { text: arr[4] }];
+
+    Question.insertMany(many, function (err, newQuest) {
+                if (err) {
+                    console.log(err);
+                    return;
+                } else {
+                    console.log(newQuest);
+                }
+            });
+
+                      // Question.insertMany(many, function (err, newQuest) {
+            //     if (err) {
+            //         console.log(err);
+            //         return;
+            //     } else {
+            //         console.log(newQuest);
+
+            //         for (var i = 0; i < newQuest.length; i++) {
+            //             user.questions.push(newQuest[i]);
+            //         }
+
+            //         user.save();
+            //     }
+            // });
+
+  
+
+
+
+
+ $.ajax({
+        type: "GET",
+        url: "http://localhost:3000/users/" + param,
+        success: function (response) {
+            console.log(response);
+
+            //console.log(response.firstName);
+            //  console.log(response.questions[0].text);
+
+            $('#editBtn').html('<a href="./edit.html?myVar=' + response._id + '"class="btn btn-md btn-warning">Edit</a>');
+            $('#linkDiv').html('<a href="../questions/new.html?myVar=' + response._id + '" class="btn btn-success">הוסף שאלה</a>');
+
+            let htmlString = ' <p  class="lead text-center"> ' + "פרטי המשתמש" + '</p><div class="list-group"><li class="list-group-item active">' + response.firstName + '</li><li class="list-group-item">' + response.lastName + '</li><li class="list-group-item">' + response.phoneNumber + '</li> ';
+
+            $('#detailDiv').html(htmlString);
+
+            htmlString = '';
+            for (let i = 0; i < response.questions.length; i++) {
+                console.log(response.questions[i].text);
+                htmlString += '<span >  <strong> ' + (i + 1) + '.</strong> <span class="pull-right"> ' + response.questions[i].text + " " + '  </span> </span>  <p></p> <hr>';
+            }
+            $('#questionDiv').html(htmlString);
+        },
+            error: function(err){
+                    
+            }
+        
+    });
+
+
+
+    <!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="/Client/users/new.js" ></script>
+<!-- Bootstrap JS CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="/Client/users/edit.js" ></script>
+<!-- Bootstrap JS CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+var arr = [
+    "כמה פעמים בחודש האחרון הרגשת שנשאר לך שתן לאחר השתנה ",
+    "כמה פעמים בחודש האחרון היית צריך להשתין כל שעתיים או פחות",
+    "כמה פעמים בחודש האחרון חשת בהפסקות במהלך ההשתנה ",
+    "כמה פעמים בחודש האחרון היה לך קשה להתאפק ",
+    "כמה פעמים בחודש האחרון שמת לב לזרימת שתן חלשה "
+];
+
+var many = [{ text: arr[0] }, { text: arr[1] }, { text: arr[2] }, { text: arr[3] }, { text: arr[4] }];
+
+DefualtQuestion.insertMany(many , function (err, newQuests) {
+    if(err){console.log(err);}
+    else{
+        Question.insertMany(newQuests , function(err , quest){
+            if(err)console.log("sa");
+            else{console.log("susususus");
+            }
+            
+        })
+    }
+})
+
+
+
+// DefualtQuestion.find({} , function(err,arrQuest){
+//     if(err)console.log(err);
+//     else{
+//         Question.insertMany(arrQuest , function(err , yay){
+//             if(err){console.log(err)}
+//             else{console.log("Suceededeedde");}
+//         })
+//     }
+// })
+
+
+
+// DefualtQuestion.create({text: "מה קורה אחי זה שאלה דפולטיבית חדשה." }, function(err , theQuest){
+//     if(err){
+//         console.log(err);
+//     }else{
+//         Question.create(theQuest , function(err , quest){
+//             if(err)console.log(err);
+//             else{
+//                 console.log("YEYEYYE");              
+//             }
+//         })
+//     }
+// })
+
+
+
+
+router.post("/default", JWTTester, function (req, res) {
+    let newDefualtQuestion = { text: req.body.question };
+    console.log("===============");
+    
+    console.log(req.body.forAll);
+        
+        Question.create(newDefualtQuestion, function (err, quest) {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                DefualtQuestion.insertMany([quest], function (err, newQuest) {
+                    if (err) {
+                        console.log("====================");
+                        console.log(err);
+                    }
+                    else {
+
+                         
+                        if (req.body.forAll) {
+                            console.log("hey Im here!!!");
+                            
+                            User.find({}, function (err, allUsers) {
+                                if (err) {
+                                    console.log(err);
+                                }else{
+                                    for(let i = 0 ; i < allUsers.length ; i++){
+                                        allUsers[i].questions.push(quest);
+                                        allUsers[i].save();
+                                    }
+                                    return res.send(true);
+                                }
+                            })
+                        }  else{
+                            console.log("always goes here");
+                            
+                            return res.send(true);
+                        }
+                    }
+                })
+            }
+        })
+ 
+  return;
+});
+
+
+  Question.find({_id:defId , isDefault:true} , function (err , arrDefQuest) {
+        if(err){console.log(err);
+        }else{
+            arrDefQuest[0].isDefault = false;
+        }
+      })
+
+
+
+      router.delete("/default/:default_id", JWTTester, function (req, res) {
+    let defId = req.params.default_id;
+    console.log("the Button" + defId);
+    DefualtQuestion.findByIdAndRemove(defId, function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("delted");
+
+            return res.send(true);
+        }
+    })
+});
+
+    DefualtQuestion.find({}, function (err, defaultQuest) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(defaultQuest);
+        }
+    })
+
+
+    router.delete("/users/:id/questions/:quest_id", JWTTester,function (req, res) {
+    //var number = req.body;
+    //console.log(req.body.number);
+    var num = req.body.number;
+    //var foundEqual = false;
+    User.findById(req.params.id, function (err, foundedUser) {
+        if (err) {
+            console.log(err);
+        } else {
+
+ // if the questions is a default questions so dont delete it just remove from array of user questions
+            DefualtQuestion.find({}, function (err, allQuestions) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    for(var i = 0 ; i < allQuestions.length ; i++){     
+                        if(allQuestions[i].equals(req.params.quest_id)){ // it's default questions
+                                    foundedUser.questions.splice(i, 1);
+                                    console.log("============= Deleted from array =============");
+                                    foundedUser.save();
+                                    res.send(true);
+                                    return;
+                        }        
+                    }    
+                    // IF we got to here so it is not a default questions
+                    Question.findByIdAndRemove(req.params.quest_id, function (err) {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            console.log("========= Delete Questions from The Table ============");
+                            res.send(true);
+                            return;
+                        }
+                    })
+                }
+            })
+        }
+    })
+})
+
+
+
+
+
+
+
+    // for (var i = 0; i < allQuestions.length; i++) {
+                    //     if (foundedUser.questions[i].equals(req.params.quest_id)) {
+
+                    //     }
+                    // }
+
+
+
+
+// allQuestions.forEach(theQuest => {
+//     if (theQuest._id.equals(req.params._id)) {
+//         foundedUser.questions.splice(num, 1);
+//         console.log("founded!!!");
+//         foundedUser.save();
+//         res.send(true);
+//         return;
+//     }
+// });
+
+"+ questArr.questions[num.number]._id +"
+
+   
+    // console.log("Hit The Patient POst Rpute");
+    // console.log(req.params.phoneNumber);
+    // console.log(req.body);
+    // res.send("kol hakavod");
+    // console.log("=============");
+    // console.log(req.body.arr);
+    // console.log(req.body.arr[0]);
+    // let arrAnswers = req.body.arr;
+
+      // User.find({ phoneNumber: me, creatorId: req.user["_id"] }, function (err, userArray) {
+    //     if (err) {
+    //         console.log(err);
+    //     } else {
+    //         res.send(userArray);
+    //         return;
+    //     }
+    // })
+
+    //var DefualtQuestion = require("../model/defualtQuestion");
+
+
+// var flag = true;
+// if(!isFoundId){
+//     for(let k = 0 ; k <arrAns[i].answerArr.length; k++ ){
+//         for(let c = 0 ; c < arr.length ; c++){
+//             if(arr[c].id === (arrAns[i].answerArr[k].questionId)){
+              
+//             }
+
+//             if(flag){
+//                 let ob = { id:arrAns[i].answerArr[j].questionId , sum:arrAns[i].answerArr[j].answer , counter:1};
+//                 arr.push(ob);
+//             }
+
+//         }
+        
+//     }
+   
+// }
+
+
+
+// foundUser.questions.forEach(element => {
+//     if (element._id.equals(foundUser.questions[index]._id)) {
+//         foundedUser.questions.splice(req.body.number, 1);
+//         console.log("============= Deleted from array =============");
+//         foundedUser.save();
+//         res.send(true);
+//         return;
+//     }
+
+// });
+
+   // User.findById(req.params.id , function(err , foundedUser){
+    //     if (err) {
+    //         console.log(err);
+    //     } else {
+    //     }
+    // });
+    // router.post("/logout", function (req, res) {
+//     localStorage.clear();
+//     return;
+// });
+
+
+
+  var user = { firstName: req.body.firstName, lastName: req.body.lastName, phoneNumber: req.body.phoneNumber };
+
+   
+
+          
+    User.find({phoneNumber: req.body.phoneNumber} , function(err , sameUser){
+        if (err) {
+            console.log(err);
+            res.send(false);
+            
+        } else {
+            if( !sameUser || (sameUser.length === 1 && req.body.isTheSameNumber)){
+                delete req.body.isTheSameNumber;
+            
+            
+            }else{
+                          
+                res.send(false);
+            }
+            
+        }
+    })

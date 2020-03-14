@@ -1,0 +1,112 @@
+
+textarea {
+    resize: none;
+  }
+#userInterface{
+    visibility: hidden;
+}
+li{
+    list-style-type:none;
+}
+#inputOfNumber{
+    font-size: 2rem;
+      height: 50px; 
+      width: 60%;
+      border: 2px solid rgb(142, 123, 177);
+      border-radius: 8px;
+}
+
+.on{
+    font-size: 2rem;
+}
+.off{
+    font-size: 2rem;
+}
+
+.inputMinMax{
+    font-size: 2rem;
+      height: 40px; 
+      margin-top: 5px;
+      width: 40%;
+      border: 2px solid rgb(221, 28, 60);
+      border-radius: 8px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+.bigger-text{
+    font-size: 3rem;
+   
+}
+
+.radiusForm{
+    
+    height:55px;
+    text-align: center;
+    font-size: 2rem;
+}
+.radiusBtn{
+    border-radius: 3%;
+    border-color:#5bc0de;
+    border-width: 1px;
+}
+
+body{
+    background-image: url("https://image.freepik.com/free-photo/doctor-holding-stethoscope_23-2147822716.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.delete-form{
+    display: inline;
+}
+
+.agol{
+    border: 5px solid red;
+}
+
+
+
+.radiosBtn{
+    width: 32%;
+    margin: 5px;
+}
+
+
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+   .modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading .modal {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}

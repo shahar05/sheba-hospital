@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Make site responsive on mobile/tablet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Demo app</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    
+    <!-- Bootstrap JS CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+        <script  src="./indexx.js" type="module"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="../index.html">Shiba</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a  href="./">Home</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li><a href="../index.html">Login</a></li>
+                    <li><a href="../register.html">Sign Up</a></li> -->
+                    <li><a href="#">Signed In As <span id="loggedUser">hola</span> </a></li>
+                    <li><a id="logoutBtn" href="../index.html">Logout</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="noDigit" hidden>
+        <div   class='alert alert-success container text-center' role='alert'>Search Input Must Contain Only Numbers!</div>
+    </div>
+
+    <div class="container ">
+
+        <div style="margin: 50px 0px ;" class="container-fluid">
+            <div class="row">
+                          
+                        <a class="  col-md-3 btn btn-info btn-lg" href="/soc/questions/newDefualt.html">Add a default question</a>
+                        <span  class="col-md-7 text-center" >
+                            <input class="text-center" id="inputOfNumber" placeholder="Enter phone number"> 
+                            <div style="height: 10px;"></div>
+                            <input class="btn btn-lg btn-warning" style="width: 60%;" type="submit" value="Search" id="searchNumber">
+                        </span>
+                        <a  class="btn btn-info btn-lg col-md-2" href="../users/new.html"> Add a new patient</a>
+                        
+                   
+            </div>
+        </div>
+
+
+        <div id="userDiv" class="row text-center " style="display:flex; flex-wrap:wrap;">
+
+
+
+        </div>
+
+
+    </div>
+
+
+   
+
+</body>
+
+</html>
